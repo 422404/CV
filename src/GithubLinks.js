@@ -175,7 +175,7 @@ export default class GithubLinks extends React.Component {
     render() {
         return (
             <div className="github-links-wrapper" ref="wrapper"
-                    style={{height: "100%"}}
+                    style={{...this.props.style, height: "100%"}}
                     onMouseMove={this.handleMouseMove.bind(this)}
                     onMouseLeave={this.handleMouseLeave.bind(this)}>
                 <canvas
