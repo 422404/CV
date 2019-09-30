@@ -108,7 +108,9 @@ export default class GithubLinks extends React.Component {
             let minDist;
             let minGrabber = null;
             for (let grabber of this.grabbers) {
-                if (grabber.canGrab(x, y)) {
+                if (grabber.canGrab(x, y)
+                        && y >= grabber.r / 2 && y <= canvasRect.bottom - canvasRect.top - grabber.r / 2
+                        && x >= grabber.r / 2 && x <= canvasRect.right - canvasRect.left - grabber.r / 2) {
                     if (!minGrabber || grabber.getDist(x, y) < minDist) {
                         if (minGrabber) this.setGrabberInactive(minGrabber);
                         minDist = grabber.getDist(x, y);
@@ -165,7 +167,7 @@ export default class GithubLinks extends React.Component {
                 this.canvas,
                 aRect.right + 0 + height - canvasRect.left,
                 aRect.top + height / 2 - canvasRect.top,
-                height / 2,
+                10,
                 this.GRAB_DISTANCE,
                 aNode,
                 this.props.light

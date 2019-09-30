@@ -1,17 +1,17 @@
 import React from "react";
 import {Container, Badge} from "reactstrap";
-import GithubLinks from './GithubLinks';
-import Mobile from "./Mobile";
+import {NavLink} from "react-router-dom";
 import BadgeList from "./BadgeList";
+import StudentProjects from "./StudentProjects";
 
 export default function Home() {
     return (
-        <Container className="pb-3">
+        <Container className="pb-5">
             <h2>Qui suis-je ?</h2>
             <p>
                 Je suis un passionné de programmation depuis plusieurs années.
                 Je suis toujours motivé pour apprendre de nouvelles techniques ou technologies, par conséquent
-                je me fixe souvent de petits projets afin de m'amuser et apprendre en même temps.
+                je me fixe souvent de <NavLink to="/projets" exact>petits projets</NavLink> afin de m'amuser et apprendre en même temps.
             </p>
 
             <h2 className="mt-5">Mes études</h2>
@@ -42,7 +42,7 @@ export default function Home() {
                 <Badge className="mx-2" color="light" pill>OCaml</Badge>
                 <Badge className="mx-2" color="light" pill>PHP</Badge>
                 <Badge className="mx-2" color="light" pill>Bash</Badge>
-                <Badge className="mx-2" color="light" pill>Go</Badge>
+                <Badge className="mx-2" color="light" pill>Rust</Badge>
             </BadgeList>
 
             <BadgeList title="Mes outils">
@@ -64,19 +64,14 @@ export default function Home() {
                 <Badge className="mx-2" color="light" pill>Raspbian</Badge>
             </BadgeList>
 
-            <h2 className="mt-5">Mes projets scolaires</h2>
-            <Mobile.Yes>
-                <div style={{display: "inline-flex", flexDirection: "column", alignItems: "flex-start"}}>
-                    <a href="https://github.com" style={{display: "inline-block"}}>Hello world!</a>
-                    <a href="https://reddit.com" style={{display: "inline-block"}}>Wow!</a>
-                </div>
-            </Mobile.Yes>
-            <Mobile.No>
-                <GithubLinks light>
-                    <a href="https://github.com" style={{display: "inline-block"}}>Hello world!</a>
-                    <a href="https://reddit.com" style={{display: "inline-block"}}>Wow!</a>
-                </GithubLinks>
-            </Mobile.No>
+            <h2 className="mt-5 mb-3">Mes projets scolaires</h2>
+            <StudentProjects />
+
+            <h2 className="mt-5 mb-3">Concours</h2>
+            <ul>
+                <li>Coding Battle 2017: Arrivé 546 sur 3090</li>
+                <li>App’s Challenge 2017: 4ème place obtenue avec le thème «Négawatt City»</li>
+            </ul>
         </Container>
     );
 }

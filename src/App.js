@@ -1,7 +1,10 @@
 import React from "react";
-import {BrowserRouter, Route, Redirect, Switch, NavLink} from "react-router-dom";
-import {Navbar, NavbarBrand, Nav, NavItem} from "reactstrap";
+import {BrowserRouter, Route, Redirect, Switch} from "react-router-dom";
 import Home from "./Home";
+import MyProjects from "./MyProjects";
+import Hacking from "./Hacking";
+import Header from "./Header";
+import Contact from "./Contact";
 import Page404 from "./Page404";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,22 +14,12 @@ function App() {
     return (
         <BrowserRouter>
             <div className="text-light bg-dark min-vh-100">
-                <Navbar className="mb-5 shadow" color="dark" dark>
-                    <NavbarBrand href="/">Elyan Poujol</NavbarBrand>
-                    <Nav className="mr-auto navbar-expand-sm" navbar>
-                        <NavItem>
-                            <NavLink className="nav-link ml-3" activeClassName="navlink-current" to="/" exact>Accueil</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link ml-3" activeClassName="navlink-current" to="/projets" exact>Projets</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Navbar>
+                <Header />
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/projets" exact children={() => (
-                        <p>Mes projets</p>
-                    )} />
+                    <Route path="/projets" exact component={MyProjects} />
+                    <Route path="/hacking" exact component={Hacking} />
+                    <Route path="/contact" exact component={Contact} />
                     <Route path="/404" component={Page404} />
                     <Redirect to="/404" />
                 </Switch>
