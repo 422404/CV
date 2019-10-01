@@ -9,7 +9,7 @@ export default function MyProjects() {
     };
     return (
         <Container className="pb-5">
-            <Card inverse style={{...cardStyle, flexDirection: "row"}} className="m-4">
+            <Card inverse style={{...cardStyle, flexDirection: "row"}} className="my-4">
                 <img height="200rem" width="200rem" src="https://avatars1.githubusercontent.com/u/22260771" className="d-none d-lg-inline-block" alt="Github profile pic" />
                 <CardBody>
                     <CardTitle>422404</CardTitle>
@@ -26,7 +26,7 @@ export default function MyProjects() {
             </Card>
 
             <h2 className="mt-5">Mes projets actifs</h2>
-            <Card body inverse style={cardStyle} className="m-4">
+            <Card body inverse style={cardStyle} className="my-4">
                 <CardTitle>PipouScript</CardTitle>
                 <CardText>
                     J'ai pour projet de construire mon propre langage de programmation.
@@ -41,7 +41,7 @@ export default function MyProjects() {
                 </CardText>
             </Card>
 
-            <Card body inverse style={cardStyle} className="m-4">
+            <Card body inverse style={cardStyle} className="my-4">
                 <CardTitle>GameStreaming</CardTitle>
                 <CardText>
                     Afin d'apprendre à utiliser Docker je compte essayer de construire
@@ -57,7 +57,7 @@ export default function MyProjects() {
                 </CardText>
             </Card>
 
-            <Card body inverse style={cardStyle} className="m-4">
+            <Card body inverse style={cardStyle} className="my-4">
                 <CardTitle>MinecraftLauncherCLI</CardTitle>
                 <CardText>
                     Un petit launcher minecraft en ligne de commande programmé en Python
@@ -70,7 +70,7 @@ export default function MyProjects() {
             </Card>
 
             <h2 className="mt-5">Mes projets stoppés</h2>
-            <Card body inverse style={cardStyle} className="m-4">
+            <Card body inverse style={cardStyle} className="my-4">
                 <CardTitle>Lang</CardTitle>
                 <CardText>
                     Premier jet d'idées de compilateur/interprêteur. Lang aurait été un
@@ -84,7 +84,7 @@ export default function MyProjects() {
                 </CardText>
             </Card>
 
-            <Card body inverse style={cardStyle} className="m-4">
+            <Card body inverse style={cardStyle} className="my-4">
                 <CardTitle>Fr4mework</CardTitle>
                 <CardText>
                     A la suite de la découverte de React.js et Hyperapp je me suis mis
@@ -97,7 +97,7 @@ export default function MyProjects() {
                 </CardText>
             </Card>
 
-            <Card body inverse style={cardStyle} className="m-4">
+            <Card body inverse style={cardStyle} className="my-4">
                 <CardTitle>MuchServer</CardTitle>
                 <CardText>
                     Après avoir utilisé Symfony pour mon projet tuteuré de seconde année de DUT
